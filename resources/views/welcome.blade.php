@@ -82,7 +82,12 @@
             <div class="content">
                 <div class="title m-b-md">
                     Laravel
+
+                    @php echo ROOT @endphp
                 </div>
+
+
+                <?php echo dirname(__DIR__) ?>
 
                 <div class="links">
                     <a href="https://laravel.com/docs">Docs</a>
@@ -93,6 +98,7 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
                 </div>
+
             </div>
         </div>
     </body>
