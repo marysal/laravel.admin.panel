@@ -3,6 +3,7 @@
 namespace App\Http\Middleware;
 
 use Closure;
+use Auth;
 
 class CheckStatus
 {
@@ -15,6 +16,10 @@ class CheckStatus
      */
     public function handle($request, Closure $next)
     {
-        return $next($request);
+       if(Auth::user() && Auth::user()->isAdministrator()) {
+           return $next($request);
+       } else {
+           return redirect('/');
+       }
     }
 }
