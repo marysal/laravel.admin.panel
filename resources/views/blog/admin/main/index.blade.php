@@ -21,7 +21,7 @@
                     <div class="icon">
                         <i class="icon icon-bag"></i>
                     </div>
-                    <a href="" class="small-box-footer">
+                    <a href="{{route('blog.admin.orders.index')}}" class="small-box-footer">
                         More info
                         <i class="fa fa-arrow-circle-right"></i>
                     </a>
@@ -66,7 +66,7 @@
                     <div class="icon">
                         <i class="icon icon-pie-graph"></i>
                     </div>
-                    <a href="" class="small-box-footer">
+                    <a href="{{route('blog.admin.categories.index')}}" class="small-box-footer">
                         More info
                         <i class="fa fa-arrow-circle-right"></i>
                     </a>

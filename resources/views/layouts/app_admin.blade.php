@@ -110,8 +110,16 @@
                 <li class="header">Меню</li>
                 <!-- Optionally, you can add icons to the links -->
                 <li><a href="/"><i class="fa fa-home"></i> <span>В магазин</span></a></li>
-                <li><a href=""><i class="fa fa-user"></i> <span>Главная админки</span></a></li>
-                <li><a href=""><i class="fa fa-shopping-cart"></i> <span>Заказы</span></a></li>
+                <li>
+                    <a href="{{route('blog.admin.index.index')}}">
+                        <i class="fa fa-user"></i> <span>Главная админки</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="{{route('blog.admin.orders.index')}}">
+                        <i class="fa fa-shopping-cart"></i> <span>Заказы</span>
+                    </a>
+                </li>
 
 
 
@@ -122,8 +130,8 @@
               </span>
                     </a>
                     <ul class="treeview-menu">
-                        <li><a href="">Список категорий</a></li>
-                        <li><a href="">Добавить категорию</a></li>
+                        <li><a href="{{route('blog.admin.categories.index')}}">Список категорий</a></li>
+                        <li><a href="{{route('blog.admin.categories.create')}}">Добавить категорию</a></li>
                     </ul>
                 </li>
                 <li class="treeview">
@@ -195,7 +203,7 @@
     <div class="content-wrapper">
 
         <main id="app">
-            {{--@include('blog.admin.components.result_messages')--}}
+            @include('blog.admin.components.result_messages')
             @yield('content')
         </main>
     </div>
@@ -229,6 +237,8 @@
 
 <!-- AdminLTE App -->
 <script src="{{asset('adminlte/dist/js/adminlte.min.js')}}"></script>
+
+<script src="{{asset('js/my.js')}}"></script>
 
 <!-- === = ===  -->
 
