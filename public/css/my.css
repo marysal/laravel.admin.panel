@@ -45,3 +45,8 @@
     border-color: #d73925;
     color: #fff;
 }
+
+/** Для загрузки галлереи спинер */
+.overlay {
+    display: none;
+}
